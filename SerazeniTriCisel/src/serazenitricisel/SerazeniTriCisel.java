@@ -6,33 +6,38 @@
 
 package serazenitricisel;
 
+import java.util.Scanner;
+
 
 public class SerazeniTriCisel {
 
   
     public static void main(String[] args) {
-        int a = 3;
-        int b = 45;
-        int c = 995;
+        int[] pole = new int[3];
+        Scanner vstup = new Scanner(System.in);
+        for (int i=0; i<3; i++) {
+            System.out.print("Zadej "+(i+1)+". číslo: ");
+            pole[i] = vstup.nextInt();
+        }
         
-        if (a>b) {
-            // prohozeni obsahu proměnných b,c
-            int pom = a;
-            a = b;
-            b = pom;
+        if (pole[0]>pole[1]) {
+            // prohozeni obsahu proměnných pole[0],pole[1]
+            int pom = pole[0];
+            pole[0] = pole[1];
+            pole[1] = pom;
         }
-        if (b>c) {
-            // prohozeni obsahu proměnných b,c
-            int pom = b;
-            b = c;
-            c = pom;
+        if (pole[1]>pole[2]) {
+            // prohozeni obsahu proměnných pole[1],pole[2]
+            int pom = pole[1];
+            pole[1] = pole[2];
+            pole[2] = pom;
         }
-        if (a>b) {
-            // prohozeni obsahu proměnných b,c
-            int pom = a;
-            a = b;
-            b = pom;
+        if (pole[0]>pole[1]) {
+            // prohozeni obsahu proměnných pole[0],pole[1]
+            int pom = pole[0];
+            pole[0] = pole[1];
+            pole[1] = pom;
     }
-    System.out.println("Seřazeno: "+ a +","+ b +","+ c);
+    System.out.println("Seřazeno: "+ pole[0] +","+ pole[1] +","+ pole[2]);
 }
 }
